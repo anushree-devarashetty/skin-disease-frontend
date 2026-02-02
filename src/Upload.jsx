@@ -99,10 +99,10 @@ doc.text(
       const formData = new FormData()
       formData.append("file", file)
 
-      const res = await axios.post(
-        "http://127.0.0.1:8000/predict",
-        formData
-      )
+     const res = await axios.post(
+  "https://skin-disease-api.onrender.com/predict",
+  formData
+)
 
       setResult(res.data)
     } catch (err) {
