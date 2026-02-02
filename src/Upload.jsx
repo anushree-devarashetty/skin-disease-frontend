@@ -99,11 +99,14 @@ export default function Upload({ user }) {
             const formData = new FormData()
             formData.append("file", file)
 
-            await axios.post(
+            const res = await axios.post(
                 "https://skin-disease-backend-btqx.onrender.com/predict",
                 formData,
                 { headers: { "Content-Type": "multipart/form-data" } }
             )
+
+            setResult(res.data)
+
 
 
 
